@@ -4,10 +4,15 @@
 
 Una aplicación web moderna que transforma tus datos financieros en visualizaciones interactivas de D3.js, ayudándote a tomar decisiones estratégicas sobre tus ingresos y gastos.
 
-![React](https://img.shields.io/badge/React-19.2.0-61DAFB?style=flat&logo=react)
-![D3.js](https://img.shields.io/badge/D3.js-7.9.0-F9A03C?style=flat&logo=d3.js)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4.18-38B2AC?style=flat&logo=tailwind-css)
-![Vite](https://img.shields.io/badge/Vite-7.2.4-646CFF?style=flat&logo=vite)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![D3.js](https://img.shields.io/badge/D3.js-F9A03C?style=for-the-badge&logo=d3.js&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+---
+
+## 🚀 Demo en Vivo
+👉 **[Probar Aplicación Online](https://freelance-priority-viz.onrender.com/)**
 
 ---
 
@@ -16,14 +21,14 @@ Una aplicación web moderna que transforma tus datos financieros en visualizacio
 ### 📊 Visualizaciones Interactivas
 
 - **Matriz de Eisenhower Financiera**: Clasifica tus gastos según urgencia (días restantes) e importancia (nivel de impacto). Identifica rápidamente qué gastos requieren atención inmediata.
-  
 - **Diagrama de Flujo Sankey**: Visualiza cómo fluye tu dinero desde la facturación bruta hasta el neto disponible, pasando por impuestos y gastos operativos.
 
-### 💾 Gestión de Datos
+### 💾 Gestión de Datos Profesional
 
-- **Persistencia Local**: Tus datos se guardan automáticamente en el navegador (localStorage)
-- **Exportar/Importar**: Descarga tus datos en formato JSON para backups o migración
-- **Modo Demo**: Carga 20 transacciones de ejemplo para explorar las funcionalidades
+- **Excel Integrado**: Importa y exporta archivos `.xlsx` reales con estilos corporativos (gracias a `exceljs` y `xlsx`).
+- **Plantillas Inteligentes**: Descarga una plantilla formateada con instrucciones para evitar errores al subir datos.
+- **Persistencia Local**: Tus datos se guardan automáticamente en el navegador (`localStorage`) por privacidad.
+- **Modo Demo**: Carga datos de ejemplo con un clic para probar la herramienta al instante.
 
 ### 📈 Dashboard Ejecutivo
 
@@ -34,10 +39,10 @@ Una aplicación web moderna que transforma tus datos financieros en visualizacio
 
 ### ✨ Experiencia de Usuario
 
-- **Animaciones Suaves**: Transiciones D3.js fluidas al añadir o eliminar datos
-- **Tooltips Interactivos**: Información detallada al pasar el cursor
-- **Diseño Responsivo**: Optimizado para desktop y móvil
-- **Tema Oscuro**: Interfaz moderna con glassmorphism
+- **Tour Guiado**: Un asistente interactivo (Driver.js) te enseña a usar la app paso a paso.
+- **Animaciones Suaves**: Transiciones D3.js fluidas (Enter/Update/Exit pattern).
+- **Feedback Visual**: Notificaciones tipo "Toast" para confirmar acciones.
+- **Tema Oscuro**: Interfaz moderna diseñada con Tailwind CSS.
 
 ---
 
@@ -45,26 +50,28 @@ Una aplicación web moderna que transforma tus datos financieros en visualizacio
 
 | Tecnología | Propósito |
 |------------|-----------|
-| **React 19** | Framework de UI con hooks modernos |
+| **React** | Framework de UI con hooks modernos |
 | **D3.js v7** | Visualizaciones de datos personalizadas |
 | **Tailwind CSS** | Diseño y estilos utility-first |
 | **Vite** | Build tool rápido y moderno |
-| **d3-sankey** | Plugin para diagramas Sankey |
+| **ExcelJS** | Generación de reportes Excel con estilos |
+| **SheetJS (xlsx)** | Procesamiento de datos de hojas de cálculo |
+| **Driver.js** | Tour de bienvenida interactivo |
 
 ---
 
-## 🚀 Instalación y Uso
+## 🚀 Instalación y Uso Local
 
 ### Prerrequisitos
 
 - Node.js 18+ 
-- npm o yarn
+- npm
 
 ### Pasos de Instalación
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/freelance-priority-viz.git
+git clone [https://github.com/JorgeReina-fl/freelance-priority-viz.git](https://github.com/JorgeReina-fl/freelance-priority-viz.git)
 cd freelance-priority-viz
 
 # 2. Instalar dependencias
@@ -76,184 +83,85 @@ npm run dev
 # 4. Abrir en el navegador
 # http://localhost:5173
 ```
-
-### Scripts Disponibles
-
-```bash
-npm run dev      # Servidor de desarrollo
-npm run build    # Build de producción
-npm run preview  # Preview del build
-npm run lint     # Linter ESLint
-```
-
----
-
 ## 📖 Guía de Uso
 
 ### 1️⃣ Primera Vez
-
-Al abrir la aplicación sin datos, verás un **estado vacío** con un botón prominente:
-
-- **"Cargar Datos de Demo"**: Carga 20 transacciones variadas para explorar las visualizaciones
-- **"+ Nueva Transacción"** (FAB): Añade tu primera transacción manualmente
+Al abrir la aplicación sin datos, verás un **estado vacío**. Tienes dos opciones para comenzar:
+- **Tour Guiado:** Inicia un recorrido paso a paso por las funcionalidades.
+- **Cargar Datos de Demo:** Usa este botón para visualizar inmediatamente la potencia de los gráficos con datos de prueba.
 
 ### 2️⃣ Añadir Transacciones
+Haz clic en el botón flotante **+** (o "Nueva Transacción") para abrir el formulario:
 
-Haz clic en el botón flotante **+** (esquina inferior derecha) para abrir el formulario:
+| Campo | Descripción |
+| :--- | :--- |
+| **Tipo** | Ingreso o Gasto. |
+| **Concepto** | Descripción breve (ej: "Proyecto Web Cliente A"). |
+| **Monto** | Cantidad en euros. |
+| **Fecha de Vencimiento** | Cuándo se cobra o se paga. |
+| **Nivel de Impacto** | Del 1 al 10 (qué tan crítico es el movimiento). |
+| **Categoría** | Etiquetas como Impuestos, Clientes, Software, etc. |
 
-- **Tipo**: Ingreso o Gasto
-- **Concepto**: Descripción (ej: "Proyecto Web Cliente A")
-- **Monto**: Cantidad en euros
-- **Fecha de Vencimiento**: Cuándo se cobra/paga
-- **Nivel de Impacto**: Del 1 al 10 (qué tan crítico es)
-- **Categoría**: Impuestos, Clientes, Software, etc.
+### 3️⃣ Explorar Visualizaciones (Matriz Eisenhower)
+El gráfico principal organiza tus finanzas en 4 cuadrantes:
 
-### 3️⃣ Explorar Visualizaciones
+- **Eje X:** Días restantes hasta el vencimiento (Urgencia).
+- **Eje Y:** Nivel de impacto (Importancia).
+- **Tamaño:** Representa el monto del gasto.
 
-#### Matriz de Eisenhower
-- **Eje X**: Días restantes hasta el vencimiento (urgencia)
-- **Eje Y**: Nivel de impacto (importancia)
-- **Tamaño**: Monto del gasto
-- **Color**: Clasificación automática
-  - 🔴 Rojo: Urgente e Importante
-  - 🟡 Amarillo: Importante
-  - 🟠 Naranja: Urgente
-  - 🔵 Azul: Baja prioridad
+**Código de Colores:**
+- 🔴 **Rojo:** Urgente e Importante (Pagar ya).
+- 🟡 **Amarillo:** Importante (Planificar).
+- 🔵 **Azul:** Baja prioridad.
 
-#### Flujo Financiero (Sankey)
-- Visualiza el flujo de dinero desde ingresos hasta neto disponible
-- Identifica qué porcentaje se va en impuestos vs. gastos operativos
-
-### 4️⃣ Gestionar Datos
-
-- **Exportar**: Descarga tus datos (botón en header)
-- **Importar**: Sube un archivo JSON previamente exportado
-- **Eliminar**: Usa el icono de papelera en la tabla de transacciones
+### 4️⃣ Excel y Seguridad
+- **Plantilla:** Si tienes dudas del formato para importar datos, descarga la plantilla desde el botón *"¿No tienes el formato?"*.
+- **Zona de Peligro:** En configuración (⚙️) puedes borrar todos los datos almacenados y reiniciar la app.
 
 ---
 
-## 🧠 Lógica Financiera: La Matriz de Eisenhower
+## 🧠 Lógica Financiera
 
-### Concepto Original
-
-La Matriz de Eisenhower es una herramienta de gestión del tiempo que clasifica tareas en 4 cuadrantes:
-
-1. **Urgente e Importante**: Hacer inmediatamente
-2. **Importante, No Urgente**: Planificar
-3. **Urgente, No Importante**: Delegar
-4. **Ni Urgente, Ni Importante**: Eliminar/Ignorar
-
-### Adaptación Financiera
-
-En esta aplicación, adaptamos la matriz para **gastos**:
-
-- **Urgencia**: Calculada automáticamente según los días restantes hasta el vencimiento
-  - ≤ 15 días = Urgente
-  - \> 15 días = No urgente
-
-- **Importancia**: Definida manualmente por el usuario (nivel de impacto 1-10)
-  - ≥ 8 = Importante
-  - < 8 = No importante
-
-### Clasificación Automática
+Adaptamos la matriz de productividad para la gestión de gastos:
 
 | Cuadrante | Condición | Color | Acción Recomendada |
-|-----------|-----------|-------|-------------------|
-| **Urgente y Caro** | Impacto ≥8 Y ≤15 días | 🔴 Rojo | Pagar inmediatamente |
-| **Planificar** | Impacto ≥8 Y >15 días | 🟡 Amarillo | Reservar fondos |
-| **Delegar** | Impacto <8 Y ≤15 días | 🟠 Naranja | Pagar pronto |
-| **Ignorar** | Impacto <8 Y >15 días | 🔵 Azul | Baja prioridad |
-
-### Beneficios
-
-✅ **Priorización Visual**: Identifica rápidamente qué gastos requieren atención  
-✅ **Prevención de Multas**: No olvides pagos importantes con vencimiento cercano  
-✅ **Planificación de Cashflow**: Reserva dinero para gastos importantes futuros  
-✅ **Optimización**: Identifica gastos de bajo impacto que podrías eliminar  
+| :--- | :--- | :--- | :--- |
+| **Urgente y Caro** | Impacto ≥8 **Y** ≤15 días | 🔴 Rojo | Pagar inmediatamente |
+| **Planificar** | Impacto ≥8 **Y** >15 días | 🟡 Amarillo | Reservar fondos |
+| **Delegar** | Impacto <8 **Y** ≤15 días | 🟠 Naranja | Pagar pronto |
+| **Ignorar** | Impacto <8 **Y** >15 días | 🔵 Azul | Baja prioridad |
 
 ---
 
 ## 📁 Estructura del Proyecto
 
-```
+```bash
 src/
 ├── components/
 │   ├── EisenhowerMatrix.jsx    # Scatter plot D3
-│   ├── SankeyFlow.jsx           # Diagrama Sankey
-│   ├── TransactionForm.jsx      # Formulario de entrada
-│   ├── TransactionList.jsx      # Tabla de transacciones
-│   ├── SummaryCards.jsx         # KPIs dashboard
-│   ├── DataControls.jsx         # Exportar/Importar
-│   └── EmptyState.jsx           # Estado vacío
+│   ├── SankeyFlow.jsx          # Diagrama Sankey
+│   ├── TransactionForm.jsx     # Formulario
+│   ├── DataControls.jsx        # Lógica Excel (Import/Export)
+│   └── ...
 ├── hooks/
-│   └── useFinanceData.js        # Hook de estado global
+│   └── useFinanceData.js       # Hook de estado y persistencia
 ├── utils/
-│   └── demoData.js              # Generador de datos demo
-├── data/
-│   └── mockData.json            # Datos de ejemplo
-└── App.jsx                      # Componente principal
+│   ├── excelUtils.js           # Lógica SheetJS/ExcelJS
+│   └── tourSteps.js            # Configuración del Tour
+└── App.jsx                     # Componente principal
 ```
-
----
-
-## 🎨 Personalización
-
-### Modificar Categorías
-
-Edita `src/components/TransactionForm.jsx`:
-
-```javascript
-const CATEGORIES = [
-    'Impuestos',
-    'Clientes',
-    'Software',
-    'Tu Categoría Aquí'  // Añade aquí
-];
-```
-
-### Ajustar Umbrales de Urgencia
-
-Edita `src/components/EisenhowerMatrix.jsx`:
-
-```javascript
-// Cambiar de 15 a 30 días
-if (d.daysRemaining <= 30) return '#f97316'; // Urgente
-```
-
----
-
-## 🤝 Contribuciones
-
-Las contribuciones son bienvenidas. Por favor:
-
-1. Fork el proyecto
-2. Crea una rama (`git checkout -b feature/nueva-funcionalidad`)
-3. Commit tus cambios (`git commit -m 'Añadir nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abre un Pull Request
-
 ---
 
 ## 📄 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
----
+Este proyecto está bajo la Licencia MIT.
 
 ## 👨‍💻 Autor
+Jorge Reina
 
-**Tu Nombre**  
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
+### 🐙 GitHub: @JorgeReina-fl
 
----
+### 💼 LinkedIn: Jorge Reina
 
-## 🙏 Agradecimientos
+### 📸 Instagram: @jorgereina.fl
 
-- Inspirado en la metodología de Eisenhower para gestión del tiempo
-- Visualizaciones basadas en ejemplos de [D3.js Gallery](https://observablehq.com/@d3/gallery)
-- Diseño influenciado por las mejores prácticas de UI/UX modernas
-
----
-
-**⭐ Si este proyecto te resulta útil, considera darle una estrella en GitHub!**
+#### ⭐ Si este proyecto te resulta útil, considera darle una estrella en GitHub!
