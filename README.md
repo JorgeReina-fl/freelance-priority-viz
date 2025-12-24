@@ -64,7 +64,7 @@ Una aplicación web moderna que transforma tus datos financieros en visualizacio
 
 ```bash
 # 1. Clonar el repositorio
-git clone https://github.com/tu-usuario/freelance-priority-viz.git
+git clone https://github.com/JorgeReina-fl/freelance-priority-viz.git
 cd freelance-priority-viz
 
 # 2. Instalar dependencias
@@ -242,9 +242,10 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ## 👨‍💻 Autor
 
-**Tu Nombre**  
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
+**Jorge Reina**  
+- GitHub: [@JorgeReina-fl](https://github.com/JorgeReina-fl)
+- LinkedIn: [Jorge Reina](https://linkedin.com/in/jorgereinafl)
+- Email: [jorgereina.fl@gmail.com](mailto:jorgereina.fl@gmail.com)
 
 ---
 
